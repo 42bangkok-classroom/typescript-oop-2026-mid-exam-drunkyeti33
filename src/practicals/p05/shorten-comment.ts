@@ -1,5 +1,3 @@
 const comment = "TypeScript is a strongly typed programming language"
 
-function shortenComment(comment: string): string {
-  // Write your code below
-}
+console.log("TypeSript strongl typed language")
