@@ -4,8 +4,6 @@ interface Person {
   age?: number;
 }
 
-function sortPersons(persons: Person[]): Person[] {}
-
 
 const persons: Person[] = [
   { firstName: "Somchai", lastName: "Jaidee", age: 30 },
@@ -16,3 +14,10 @@ const persons: Person[] = [
   { firstName: "Jane", lastName: "Smith", age: -5 },
   { lastName: "NoName", age: 40 }
 ];
+export function sortPersons(persons: Person[]): Person[] {
+  persons.sort((a,b) => a.firstName.localeCompare(b.firstName));
+  persons.sort((a,b) => a.lastName.localeCompare(b.lastName));
+  persons.sort((a,b) => a.age - b.age);
+  console.log(persons)
+}
+sortPersons(persons)
