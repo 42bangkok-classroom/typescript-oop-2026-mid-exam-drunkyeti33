@@ -15,6 +15,6 @@ else if(grade>=60){
 else if(grade>=50){
     console.log("Grade is D")
 }
-else if(grade>=0){
+else{
     console.log("Grade is F")
 }
