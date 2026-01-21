@@ -1,7 +1,7 @@
 interface Person {
   firstName?: string;
-  lastName?: string;
-  age?: number;
+  lastName: string;
+  age: number;
 }
 
 
@@ -14,10 +14,10 @@ const persons: Person[] = [
   { firstName: "Jane", lastName: "Smith", age: -5 },
   { lastName: "NoName", age: 40 }
 ];
-export function sortPersons(persons: Person[]): Person[] {
-  persons.sort((a,b) => a.firstName.localeCompare(b.firstName));
+export function sortPersons(persons: Person[]) {
+  persons.sort((a,b) => {return a.age - b.age;})
+ 
   persons.sort((a,b) => a.lastName.localeCompare(b.lastName));
-  persons.sort((a,b) => a.age - b.age);
   console.log(persons)
 }
 sortPersons(persons)
